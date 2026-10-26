@@ -115,13 +115,6 @@ class MovieUpdateSchema(BaseModel):
             raise ValueError("Date must not be more than one year in the future.")
         return value
 
-    @model_validator(mode="after")
-    def reject_nulls(self):
-        for field_name in self.model_fields_set:
-            if getattr(self, field_name) is None:
-                raise ValueError(f"Field '{field_name}' can't be null.")
-        return self
-
 
 class MessageSchema(BaseModel):
     detail: str
