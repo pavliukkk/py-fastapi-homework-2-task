@@ -5,7 +5,7 @@ description = "Mate task for first lesson"
 authors = ["Yurii Okal <yurii.okal@mate.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.12,<3.14"
+python = ">=3.12,<3.15"
 fastapi = "^0.115.6"
 sqlalchemy = "^2.0.36"
 pytest = "^8.3.4"
